@@ -483,13 +483,14 @@ Always verify legal information through:
 - Machine Learning
 - Backend Development
 - DevOps & Cloud
-
+  
 ---
 
 # 🌐 GitHub
 
 ```bash
 https://github.com/tusharsingh-sde
+https://github.com/nitin-panwar-6963
 ```
 
 ---
