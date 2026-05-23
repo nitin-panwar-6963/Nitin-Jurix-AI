@@ -474,7 +474,8 @@ Always verify legal information through:
 
 # 👨‍💻 Author
 
-# Tushar Singh
+# Tushar Singh (backend developer)
+# Nitin Panwar (Devops / Cloud intregation)
 
 ### Focus Areas
 - Software Engineering
