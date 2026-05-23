@@ -1,0 +1,24 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: jurix-ai
+  namespace: jurix
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: jurix
+  template:
+    metadata:
+      name: jurix
+      labels:
+        app: jurix
+    spec:
+      containers:
+      - name: jurix
+        image: nitinpanwar6963/jurixai
+        ports:
+        - containerPort: 8000
+        envFrom:
+        - configMapRef:
+            name: jurix-map

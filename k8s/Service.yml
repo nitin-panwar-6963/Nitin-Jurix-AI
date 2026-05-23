@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: jurix-service
+  namespace: jurix
+spec:
+  selector:
+    app: jurix
+  ports:
+   - protocol: TCP
+     port: 8000
+     targetPort: 8000
