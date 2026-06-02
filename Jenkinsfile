@@ -1,9 +1,10 @@
-pipeline {
+cpipeline {
     agent any
 
     environment {
         NAMESPACE = "jurix"
         IMAGE = "jurixai"
+        SONAR_HOME= tool "sonar"
     }
 
     stages {
@@ -17,6 +18,13 @@ pipeline {
                     url: 'https://github.com/nitin-panwar-6963/Nitin-Jurix-AI.git'
 
                 echo "code clone successful......"
+            }
+        }
+        stage("quality analysiy by soanr"){
+            steps{
+                withSonarQubeEnv("sonar"){
+                    sh "$SONAR_HOME/bin/sonar-scanner -Dsonar.projectName=jurix-ai -Dsonar.projectKey=jurix-ai"
+                }
             }
         }
 
