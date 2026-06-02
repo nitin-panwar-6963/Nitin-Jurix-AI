@@ -18,6 +18,7 @@ Making Legal Knowledge Accessible, Understandable, and Empathetic through Artifi
 ![LangChain](https://img.shields.io/badge/LangChain-RAG-green?style=for-the-badge)
 ![Groq](https://img.shields.io/badge/Groq-Llama_3.3-orange?style=for-the-badge)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge\&logo=docker\&logoColor=white)
+![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
 ![SonarQube](https://img.shields.io/badge/SonarQube-Code_Quality-4E9BCD?style=for-the-badge&logo=sonarqube&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge\&logo=kubernetes\&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
@@ -93,6 +94,10 @@ Every answer focuses on:
 * Practical next steps
 * Easy-to-understand language
 
+### 🔄 CI/CD Automation (Jenkins)
+
+Automated build, testing, containerization, and deployment using Jenkins pipelines.
+
 ### 🛡️ SonarQube Quality Analysis
 
 Integrated with SonarQube to detect bugs, code smells, security vulnerabilities, and enforce Quality Gates before deployment.
@@ -144,6 +149,7 @@ Supports production deployment using Docker and Kubernetes.
 | Configuration    | ConfigMap               |
 | Deployment       | Namespace + Service     |
 | Code Quality     | SonarQube               |
+| CI/CD            | Jenkins                 |
 
 ---
 
@@ -152,11 +158,12 @@ Supports production deployment using Docker and Kubernetes.
 ```bash
 JurixAI/
 │
-├── chatbot.py
+├── backend.py
 ├── build_database.py
 ├── requirements.txt
 ├── Dockerfile
 ├── docker-compose.yml
+├── Jenkinsfile
 │
 ├── data/
 │   ├── IPC.pdf
@@ -237,9 +244,7 @@ Backend Developer & AI Integration
 
 ### ☁️ Nitin Panwar
 
-### ☁️ Nitin Panwar
-
-DevOps Engineer, SonarQube Integration, Cloud Infrastructure & Kubernetes Integration
+DevOps Engineer, Jenkins CI/CD, Cloud Infrastructure & Kubernetes Integration
 
 ---
 
