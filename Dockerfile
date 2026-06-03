@@ -1,21 +1,27 @@
-# DOWNLOAD TEH BASE IMAGE 
-FROM python:3.9
+FROM python:3.9-slim
 
 # CREATE A DIRECTORY WHERE WE STORE THE CODE
 WORKDIR /app
 
 # download big thing
-RUN apt-get update && apt-get install -y \
-    tesseract-ocr \
-    gcc \
-    python3-dev
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y --no-install-recommends \
+        tesseract-ocr \
+        gcc \
+        python3-dev && \
+    rm -rf /var/lib/apt/lists/*
+
+#to remove the vulerabilites
+RUN apt-get update && apt-get upgrade -y && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 # download the langchain
 RUN pip install -U langchain-chroma
 
-# COPY ALL REQUIREMEMT TO THAT 
+# COPY ALL REQUIREMEMT TO THAT
 COPY requirements.txt .
 
-# UPDATE PIP 
+# UPDATE PIP
 RUN pip install --upgrade pip
 
 
