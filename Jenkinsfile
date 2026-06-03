@@ -27,7 +27,13 @@ cpipeline {
                 }
             }
         }
-
+        stage("check image by trivy"){
+            steps{
+                echo "start checking your image vulerbilites by trivy......"
+                sh "trivy image -s HIGH,CRITICAL --ignore-unfixed $IMAGE"
+                echo "scanning successfully......."
+            }
+        }
         stage("build") {
             steps {
 
